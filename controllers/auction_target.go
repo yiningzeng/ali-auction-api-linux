@@ -17,6 +17,7 @@ type AuctionTargetController struct {
 
 // URLMapping ...
 func (c *AuctionTargetController) URLMapping() {
+	c.Ctx.Output.Header("Access-Control-Allow-Origin", "*")
 	c.Mapping("Post", c.Post)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
